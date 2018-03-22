@@ -31,9 +31,16 @@ export class RecipeService {
       ]),
   ];
 
+
   // recipeSelected = new EventEmitter<Recipe>();
 
   constructor(private shopingListService: ShoppingListService) { }
+
+  setReceipes(recipes: Recipe[]){
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+
+  }
 
   getRecipes(){
     return this.recipes.slice();
