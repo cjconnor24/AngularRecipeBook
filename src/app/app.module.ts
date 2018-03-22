@@ -18,7 +18,8 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './recipe.service';
 import { DataStorageService } from './shared/data-storage.service';
-import { Http, HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from 'selenium-webdriver/http';
 
 
 
@@ -41,7 +42,7 @@ import { Http, HttpModule } from '@angular/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpClientModule
     // RouterModule.forRoot(appRoutes)
   ],
   providers: [ShoppingListService, RecipeService, DataStorageService],
